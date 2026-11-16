@@ -81,7 +81,7 @@ aux données réelles ni à l'environnement de production.
 |---|---|
 | Machine | Machine virtuelle, 4 cœurs Intel Xeon à 2,1 GHz, 15,7 Go de mémoire, Ubuntu 24.04 |
 | Node.js | 20.10.0 (version imposée par `.nvmrc`) |
-| PostgreSQL | 16.15, **configuration par défaut** (`shared_buffers` = 128 Mo), comme l'image Docker du readme |
+| PostgreSQL | 16.15, **configuration par défaut** (`shared_buffers` = 128 Mo), comme l'image Docker du readme. Seule l'extension `pg_stat_statements` a été activée, pour l'audit, dans les trois états |
 | Topologie | Application, base de données et injecteur de charge sur la même machine |
 
 L'application, la base et l'injecteur se partagent les quatre cœurs : les valeurs absolues ne
