@@ -1,76 +1,61 @@
 import repositoryInstance, { WeatherDataRepository } from './repository.js';
-import { WeatherData, WeatherFilter } from './dto.js';
-import dayjs from 'dayjs';
+import { WeatherData, WeatherDataFilter, WeatherFilter } from './dto.js';
+import { toDayRange } from './dayRange.js';
 
 export class WeatherService {
   private weatherRepository: WeatherDataRepository;
-  constructor() {
-    this.weatherRepository = repositoryInstance;
+  constructor(weatherRepository: WeatherDataRepository = repositoryInstance) {
+    this.weatherRepository = weatherRepository;
   }
 
   async addData(data: WeatherData) {
     return this.weatherRepository.insertWeatherData(data);
   }
 
-  async getData(location: string, options: WeatherFilter) {
-    const { from, to } = options;
-    const data = await this.weatherRepository.getWeatherDataByLocation(
-      location
+  async getData(location: string, options: WeatherDataFilter) {
+    const range = toDayRange(options);
+    // Comme les dates, `limit` arrive sous forme de chaîne déjà validée.
+    const limit = options.limit === undefined ? null : Number(options.limit);
+    const data = await this.weatherRepository.getWeatherData(
+      location,
+      range,
+      limit
     );
-    if (data === null) {
+    if (data.length > 0) {
+      return data;
+    }
+    // Contrat historique de l'API : `null` pour un lieu inconnu, `[]` pour un
+    // lieu connu sans mesure sur la période. Sans borne, « aucune ligne » veut
+    // déjà dire « lieu inconnu » ; sinon on le vérifie par une lecture d'index.
+    const unbounded = range.after === null && range.until === null;
+    if (unbounded || !(await this.weatherRepository.locationExists(location))) {
       return null;
     }
-    return data.filter((datum) => {
-      if (
-        from &&
-        (dayjs(from).isAfter(datum.date) || dayjs(from).isSame(datum.date))
-      ) {
-        return false;
-      }
-      if (to && dayjs(to).isBefore(datum.date)) {
-        return false;
-      }
-      return true;
-    });
+    return data;
   }
 
   async getMean(location: string, options: WeatherFilter) {
-    const data = await this.getData(location, options);
-    if (data === null) {
-      return null;
-    }
-    const mean =
-      data
-        .map((datum) => datum.temperature)
-        .reduce((acc, current) => acc + current, 0.0) / data.length;
-
-    return mean;
+    return this.weatherRepository.getTemperatureAggregate(
+      'avg',
+      location,
+      toDayRange(options)
+    );
   }
 
   async getMax(location: string, options: WeatherFilter) {
-    const data = await this.getData(location, options);
-
-    if (data === null) {
-      return null;
-    }
-    const mean = data
-      .map((datum) => datum.temperature)
-      .reduce((acc, current) => Math.max(acc, current), data[0].temperature);
-
-    return mean;
+    return this.weatherRepository.getTemperatureAggregate(
+      'max',
+      location,
+      toDayRange(options)
+    );
   }
 
   async getMin(location: string, options: WeatherFilter) {
-    const data = await this.getData(location, options);
-
-    if (data === null) {
-      return null;
-    }
-    const mean = data
-      .map((datum) => datum.temperature)
-      .reduce((acc, current) => Math.min(acc, current), data[0].temperature);
-
-    return mean;
+    return this.weatherRepository.getTemperatureAggregate(
+      'min',
+      location,
+      toDayRange(options)
+    );
   }
 }
 

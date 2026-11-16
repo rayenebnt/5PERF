@@ -1,10 +1,29 @@
-import express from 'express';
+import express, { Response } from 'express';
+import config from 'config';
 import { validateRequest } from 'zod-express-middleware';
-import { WeatherData, WeatherDataSchema, WeatherFilterSchema } from './dto.js';
+import {
+  WeatherData,
+  WeatherDataFilterSchema,
+  WeatherDataSchema,
+  WeatherFilterSchema,
+} from './dto.js';
 import WeatherService from './service.js';
 import logger from '../logger.js';
 
 const router = express();
+
+// Les relevés historiques changent au plus une fois par jour : on autorise
+// navigateurs, CDN et reverse proxy à réutiliser une réponse quelques dizaines
+// de secondes (réglable, 0 pour désactiver).
+const cacheMaxAge = config.get<number>('api.cacheMaxAgeSeconds');
+const cacheControl = cacheMaxAge > 0 ? `public, max-age=${cacheMaxAge}` : null;
+
+function sendCacheable(res: Response, body: unknown) {
+  if (cacheControl) {
+    res.set('Cache-Control', cacheControl);
+  }
+  return res.json(body);
+}
 
 router.post(
   '/data',
@@ -24,13 +43,13 @@ router.post(
 
 router.get(
   '/data/:location',
-  validateRequest({ query: WeatherFilterSchema }),
+  validateRequest({ query: WeatherDataFilterSchema }),
   async (req, res) => {
     const { location } = req.params;
     const options = req.query;
     try {
       const data = await WeatherService.getData(location, options);
-      return res.json(data);
+      return sendCacheable(res, data);
     } catch (error) {
       logger.error(error);
       return res.sendStatus(500);
@@ -46,7 +65,7 @@ router.get(
     const options = req.query;
     try {
       const avg = await WeatherService.getMean(location, options);
-      return res.json({ avg });
+      return sendCacheable(res, { avg });
     } catch (error) {
       logger.error(error);
       return res.sendStatus(500);
@@ -62,7 +81,7 @@ router.get(
     const options = req.query;
     try {
       const max = await WeatherService.getMax(location, options);
-      return res.json({ max });
+      return sendCacheable(res, { max });
     } catch (error) {
       logger.error(error);
       return res.sendStatus(500);
@@ -78,7 +97,7 @@ router.get(
     const options = req.query;
     try {
       const min = await WeatherService.getMin(location, options);
-      return res.json({ min });
+      return sendCacheable(res, { min });
     } catch (error) {
       logger.error(error);
       return res.sendStatus(500);

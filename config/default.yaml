@@ -1,6 +1,12 @@
 api:
   port: 3000
   logFormat: 'tiny'
+  # Compression gzip/brotli des réponses de plus de 4 ko. À désactiver si un
+  # reverse proxy ou un CDN compresse déjà.
+  compression: true
+  # Durée (secondes) pendant laquelle un client ou un cache intermédiaire peut
+  # réutiliser une réponse GET. 0 désactive l'en-tête Cache-Control.
+  cacheMaxAgeSeconds: 60
 logLevel: 'debug'
 database:
   user: WeatherTrack
@@ -8,3 +14,15 @@ database:
   database: WeatherTrack
   password: mysecretpassword
   port: 5432
+  # Pool de connexions. Règle de dimensionnement : nombre d'instances × max
+  # doit rester sous le max_connections de PostgreSQL.
+  max: 10
+  idleTimeoutMillis: 30000
+  # Échoue vite plutôt que d'empiler les requêtes si la base ne répond plus.
+  connectionTimeoutMillis: 5000
+  # Garde-fou (ms) : aucune requête ne peut monopoliser la base.
+  statement_timeout: 15000
+  application_name: weather-track-pro
+migrations:
+  # Applique les migrations en attente au démarrage (pratique en développement).
+  runOnStart: true

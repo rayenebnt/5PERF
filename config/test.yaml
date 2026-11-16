@@ -1,0 +1,7 @@
+# Jest définit NODE_ENV=test : les tests d'intégration travaillent dans un
+# schéma PostgreSQL à part, créé puis supprimé par les tests eux-mêmes.
+logLevel: 'error'
+database:
+  options: '-c search_path=weathertrack_test'
+migrations:
+  runOnStart: false

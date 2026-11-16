@@ -1,0 +1,8 @@
+{
+  // Build de production : uniquement le code de l'application, émis dans dist/.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+  },
+  "include": ["src"],
+}

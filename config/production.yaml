@@ -8,3 +8,7 @@ database:
   database: toBeDefinedAtDeployTime
   password: toBeDefinedAtDeployTime
   port: 5432
+migrations:
+  # En production, les migrations sont une étape de déploiement explicite :
+  # `npm run migrate`, avant de démarrer la nouvelle version.
+  runOnStart: false

@@ -4,5 +4,7 @@
     "types": ["node", "jest"],
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     "outDir": "./dist",                               /* Specify an output folder for all emitted files. */
+    "isolatedModules": true,                          /* Each file can be transpiled on its own (required by ts-jest with Node16 modules). */
   },
+  "include": ["src", "tests", "jest.config.ts"],
 }
