@@ -4,7 +4,7 @@ Mini-projet 5PERF : audit de performance, optimisation et migration du backend d
 l'API qui stocke les relevés météorologiques historiques et en calcule les analyses (moyenne,
 minimum, maximum de température).
 
-Ce dépôt contient le code optimisé, l'outillage de mesure et les quatre livrables du projet.
+Ce dépôt contient le code optimisé, l'outillage de mesure et les livrables du projet.
 
 ## Livrables
 
@@ -13,11 +13,12 @@ Ce dépôt contient le code optimisé, l'outillage de mesure et les quatre livra
 | 1. Rapport de performance | [docs/01-rapport-de-performance.md](docs/01-rapport-de-performance.md) | [PDF](docs/pdf/01-rapport-de-performance.pdf) |
 | 2. Code optimisé et documentation des modifications | [`src/`](src), [docs/02-modifications-du-code.md](docs/02-modifications-du-code.md) | [PDF](docs/pdf/02-modifications-du-code.pdf) |
 | 3. Document de recommandations | [docs/03-recommandations.md](docs/03-recommandations.md) | [PDF](docs/pdf/03-recommandations.pdf) |
-| 4. Présentation (17 diapositives) | [docs/04-presentation.pdf](docs/04-presentation.pdf), [fil conducteur](docs/04-presentation-fil-conducteur.md) | — |
 | Mesures brutes et tableaux complets | [docs/benchmarks/](docs/benchmarks/README.md) | — |
 
-Le code fourni au départ est conservé tel quel dans le premier commit du dépôt (`0a8852e`) :
-`git diff 0a8852e -- src` montre l'ensemble des modifications.
+Le code fourni au départ (l'archive de l'énoncé) est conservé tel quel dans le premier commit du
+dépôt (`0a8852e`). Avec l'historique git, `git diff 0a8852e -- src` montre l'ensemble des
+modifications ; sans lui, elles sont décrites une à une, extraits avant et après à l'appui, dans la
+[documentation des modifications](docs/02-modifications-du-code.md).
 
 ## Résultats en bref
 

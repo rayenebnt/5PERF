@@ -841,7 +841,9 @@ Générer la base de référence (environ deux minutes, 1,8 Go) :
 node bench/seed.mjs --reset
 ```
 
-Mesurer l'application d'origine (dans une copie de travail du premier commit du dépôt, `0a8852e`) :
+Mesurer l'application d'origine. Son code est l'archive fournie avec l'énoncé, conservée dans le
+premier commit du dépôt (`0a8852e`). Avec l'historique git (sinon, décompresser l'archive de l'énoncé
+dans `../weathertrack-origine`) :
 
 ```sh
 git worktree add ../weathertrack-origine 0a8852e

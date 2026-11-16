@@ -4,7 +4,9 @@ Ce document décrit chaque modification apportée au code fourni : le problème 
 pourquoi le comportement fonctionnel est préservé, et l'effet mesuré. Les mesures détaillées et leur
 méthode sont dans le [rapport de performance](01-rapport-de-performance.md).
 
-Le code d'origine est conservé dans le premier commit du dépôt (`0a8852e`) :
+Le code d'origine — l'archive fournie avec l'énoncé — est conservé dans le premier commit du dépôt
+(`0a8852e`). Si l'historique git accompagne le rendu, cette commande affiche l'ensemble des
+modifications :
 
 ```sh
 git diff 0a8852e -- src config package.json tsconfig.json
