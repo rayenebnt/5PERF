@@ -1,0 +1,2 @@
+[{"query":"SELECT * FROM weather WHERE location = $1","calls":10336,"total_exec_ms":253139.4,"mean_exec_ms":24.491,"mean_plan_ms":0.000,"rows_per_call":5359.2,"blocks_per_call":5406.0}, 
+ {"query":"INSERT INTO weather (location, date, temperature, humidity) VALUES ($1, $2, $3, $4)","calls":28767,"total_exec_ms":684.4,"mean_exec_ms":0.024,"mean_plan_ms":0.000,"rows_per_call":1.0,"blocks_per_call":5.0}]

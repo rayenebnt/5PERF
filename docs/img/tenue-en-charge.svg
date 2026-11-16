@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title id="t">Temps de réponse au 95ᵉ centile selon le débit imposé</title>
+<desc id="d">Origine : 2 req/s 244 ms, 5 req/s 257 ms, 10 req/s 5 646 ms, 20 req/s 33 732 ms ; Code optimisé, base inchangée : 2 req/s 70,5 ms, 5 req/s 64,5 ms, 10 req/s 69,4 ms, 20 req/s 64,0 ms, 50 req/s 67,7 ms, 100 req/s 78,0 ms ; Code optimisé + migration : 2 req/s 9,96 ms, 5 req/s 8,02 ms, 10 req/s 7,28 ms, 20 req/s 6,01 ms, 50 req/s 25,2 ms, 100 req/s 31,9 ms, 200 req/s 53,3 ms, 300 req/s 90,2 ms, 400 req/s 260 ms, 600 req/s 20 534 ms</desc>
+<rect width="860" height="440" rx="8" fill="#fcfcfb"/>
+<text x="28" y="34" font-size="16" fill="#0b0b0b" text-anchor="start" font-weight="600">Tenue en charge : le point de saturation recule de 5 à plusieurs centaines de requêtes par seconde</text>
+<text x="28" y="56" font-size="13" fill="#898781" text-anchor="start" font-weight="400">Trafic mixte à débit imposé · 95ᵉ centile du temps de réponse · échelles logarithmiques</text>
+<rect x="76" y="72" width="12" height="12" rx="2" fill="#7b7974"/>
+<text x="94" y="82" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Origine</text>
+<rect x="167.7" y="72" width="12" height="12" rx="2" fill="#6da7ec"/>
+<text x="185.7" y="82" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Code optimisé, base inchangée</text>
+<rect x="415.59999999999997" y="72" width="12" height="12" rx="2" fill="#1c5cab"/>
+<text x="433.59999999999997" y="82" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Code optimisé + migration</text>
+<line x1="76" y1="376" x2="660" y2="376" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="380" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">1 ms</text>
+<line x1="76" y1="321.6" x2="660" y2="321.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="325.6" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">10 ms</text>
+<line x1="76" y1="267.2" x2="660" y2="267.2" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="271.2" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">100 ms</text>
+<line x1="76" y1="212.8" x2="660" y2="212.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="216.8" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">1 s</text>
+<line x1="76" y1="158.39999999999998" x2="660" y2="158.39999999999998" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="162.39999999999998" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">10 s</text>
+<line x1="76" y1="104" x2="660" y2="104" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66" y="108" font-size="12" fill="#898781" text-anchor="end" font-weight="400" style="font-variant-numeric: tabular-nums">100 s</text>
+<line x1="76" y1="376" x2="660" y2="376" stroke="#c3c2b7" stroke-width="1"/>
+<line x1="76" y1="376" x2="76" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="76" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">2</text>
+<line x1="169.81735537640066" y1="376" x2="169.81735537640066" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="169.81735537640066" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">5</text>
+<line x1="240.78744500475858" y1="376" x2="240.78744500475858" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="240.78744500475858" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">10</text>
+<line x1="311.7575346331166" y1="376" x2="311.7575346331166" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="311.7575346331166" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">20</text>
+<line x1="405.57489000951716" y1="376" x2="405.57489000951716" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="405.57489000951716" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">50</text>
+<line x1="476.5449796378752" y1="376" x2="476.5449796378752" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="476.5449796378752" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="547.5150692662332" y1="376" x2="547.5150692662332" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="547.5150692662332" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">200</text>
+<line x1="589.0299103716421" y1="376" x2="589.0299103716421" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="589.0299103716421" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">300</text>
+<line x1="618.4851588945912" y1="376" x2="618.4851588945912" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="618.4851588945912" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">400</text>
+<line x1="660" y1="376" x2="660" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="660" y="398" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">600</text>
+<text x="368" y="426" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Débit imposé (requêtes par seconde)</text>
+<path d="M76.0,246.2 L169.8,244.9 L240.8,171.9 L311.8,129.7" fill="none" stroke="#7b7974" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="76.0" cy="246.2" r="5" fill="#7b7974" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="169.8" cy="244.9" r="5" fill="#7b7974" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="240.8" cy="171.9" r="5" fill="#7b7974" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="311.8" cy="129.7" r="5" fill="#7b7974" stroke="#fcfcfb" stroke-width="2"/>
+<text x="325.7575346331166" y="133.67475535240374" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">34 s à 20 req/s</text>
+<path d="M76.0,275.5 L169.8,277.6 L240.8,275.8 L311.8,277.7 L405.6,276.4 L476.5,273.1" fill="none" stroke="#6da7ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="76.0" cy="275.5" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="169.8" cy="277.6" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="240.8" cy="275.8" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="311.8" cy="277.7" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="405.6" cy="276.4" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="476.5" cy="273.1" r="5" fill="#6da7ec" stroke="#fcfcfb" stroke-width="2"/>
+<text x="482.5449796378752" y="259.0842938547996" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="600" style="font-variant-numeric: tabular-nums">78 ms à 100 req/s</text>
+<path d="M76.0,321.7 L169.8,326.8 L240.8,329.1 L311.8,333.6 L405.6,299.7 L476.5,294.2 L547.5,282.1 L589.0,269.6 L618.5,244.6 L660.0,141.4" fill="none" stroke="#1c5cab" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="76.0" cy="321.7" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="169.8" cy="326.8" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="240.8" cy="329.1" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="311.8" cy="333.6" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="405.6" cy="299.7" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="476.5" cy="294.2" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="547.5" cy="282.1" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="589.0" cy="269.6" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="618.5" cy="244.6" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="660.0" cy="141.4" r="5" fill="#1c5cab" stroke="#fcfcfb" stroke-width="2"/>
+<text x="674" y="145.4019217024456" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">21 s à 600 req/s</text>
+</svg>

@@ -1,0 +1,1518 @@
+{
+  "label": "code optimisé seul",
+  "url": "http://localhost:3001",
+  "startedAt": "2026-11-16T14:11:48.401Z",
+  "machine": {
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "cores": 4,
+    "memoryGb": 15.7,
+    "injectorNode": "v20.10.0"
+  },
+  "runs": [
+    {
+      "suite": "latency",
+      "scenario": "data-30d",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 8300,
+      "failures": 0,
+      "statuses": {
+        "200": 8300
+      },
+      "throughputRps": 1037.38,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2832,
+      "latencyMs": {
+        "min": 0.505,
+        "mean": 0.961,
+        "p50": 0.918,
+        "p75": 1.08,
+        "p90": 1.242,
+        "p95": 1.356,
+        "p99": 2.283,
+        "max": 11.979
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.701,
+        "postgresCpuMsPerRequest": 0.205,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.012,
+          "p50": 0.009,
+          "p99": 0.759,
+          "max": 2.473
+        },
+        "gc": {
+          "count": 81,
+          "pauseMs": 136
+        },
+        "peakHeapUsedMb": 63,
+        "peakRssMb": 146.7
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "data-1y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 3166,
+      "failures": 0,
+      "statuses": {
+        "200": 3166
+      },
+      "throughputRps": 395.63,
+      "drainSeconds": 0,
+      "meanResponseBytes": 34437,
+      "latencyMs": {
+        "min": 1.447,
+        "mean": 2.523,
+        "p50": 2.455,
+        "p75": 2.683,
+        "p90": 2.95,
+        "p95": 3.144,
+        "p99": 4.017,
+        "max": 27.513
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 1.51,
+        "postgresCpuMsPerRequest": 1.289,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.026,
+          "p50": 0.023,
+          "p99": 0.85,
+          "max": 22.298
+        },
+        "gc": {
+          "count": 92,
+          "pauseMs": 100.2
+        },
+        "peakHeapUsedMb": 62.9,
+        "peakRssMb": 143.1
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "data-full",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 131,
+      "failures": 0,
+      "statuses": {
+        "200": 131
+      },
+      "throughputRps": 16.25,
+      "drainSeconds": 0,
+      "meanResponseBytes": 1378194,
+      "latencyMs": {
+        "min": 28.08,
+        "mean": 60.965,
+        "p50": 61.827,
+        "p75": 65.697,
+        "p90": 71.359,
+        "p95": 81.784,
+        "p99": 101.707,
+        "max": 137.94
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 36.718,
+        "postgresCpuMsPerRequest": 48.015,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.286,
+          "p50": 0.05,
+          "p99": 9.535,
+          "max": 87.998
+        },
+        "gc": {
+          "count": 88,
+          "pauseMs": 131.7
+        },
+        "peakHeapUsedMb": 42.8,
+        "peakRssMb": 126.8
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "avg-1y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 3511,
+      "failures": 0,
+      "statuses": {
+        "200": 3511
+      },
+      "throughputRps": 438.75,
+      "drainSeconds": 0,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 1.103,
+        "mean": 2.275,
+        "p50": 2.258,
+        "p75": 2.422,
+        "p90": 2.647,
+        "p95": 2.801,
+        "p99": 3.721,
+        "max": 15.868
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.832,
+        "postgresCpuMsPerRequest": 1.359,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.074,
+          "p50": 0.093,
+          "p99": 1.018,
+          "max": 3.596
+        },
+        "gc": {
+          "count": 34,
+          "pauseMs": 57.9
+        },
+        "peakHeapUsedMb": 37.2,
+        "peakRssMb": 120.2
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "avg-full",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 155,
+      "failures": 0,
+      "statuses": {
+        "200": 155
+      },
+      "throughputRps": 19.25,
+      "drainSeconds": 0.03,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 19.533,
+        "mean": 51.739,
+        "p50": 55.117,
+        "p75": 56.661,
+        "p90": 59.966,
+        "p95": 63.397,
+        "p99": 72.173,
+        "max": 95.044
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 3.484,
+        "postgresCpuMsPerRequest": 49.935,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.112,
+          "p50": 0.095,
+          "p99": 0.69,
+          "max": 5.652
+        },
+        "gc": {
+          "count": 11,
+          "pauseMs": 18.3
+        },
+        "peakHeapUsedMb": 34.9,
+        "peakRssMb": 117.1
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "max-full",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 158,
+      "failures": 0,
+      "statuses": {
+        "200": 158
+      },
+      "throughputRps": 19.63,
+      "drainSeconds": 0,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 17.748,
+        "mean": 50.315,
+        "p50": 53.787,
+        "p75": 56.095,
+        "p90": 58.29,
+        "p95": 61.58,
+        "p99": 64.732,
+        "max": 65.354
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 2.595,
+        "postgresCpuMsPerRequest": 48.734,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.104,
+          "p50": 0.093,
+          "p99": 0.695,
+          "max": 6.004
+        },
+        "gc": {
+          "count": 5,
+          "pauseMs": 6
+        },
+        "peakHeapUsedMb": 20.4,
+        "peakRssMb": 85.1
+      }
+    },
+    {
+      "suite": "latency",
+      "scenario": "min-10y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 606,
+      "failures": 0,
+      "statuses": {
+        "200": 606
+      },
+      "throughputRps": 75.63,
+      "drainSeconds": 0,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 4.899,
+        "mean": 13.193,
+        "p50": 13.883,
+        "p75": 14.436,
+        "p90": 15.671,
+        "p95": 16.995,
+        "p99": 18.051,
+        "max": 19.607
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 1.452,
+        "postgresCpuMsPerRequest": 11.931,
+        "processPeakRssMb": 146.7,
+        "eventLoopLagMs": {
+          "mean": 0.109,
+          "p50": 0.097,
+          "p99": 0.772,
+          "max": 6.586
+        },
+        "gc": {
+          "count": 7,
+          "pauseMs": 12.8
+        },
+        "peakHeapUsedMb": 30.2,
+        "peakRssMb": 105.9
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "data-30d",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 32883,
+      "failures": 0,
+      "statuses": {
+        "200": 32883
+      },
+      "throughputRps": 2190.87,
+      "drainSeconds": 0.01,
+      "meanResponseBytes": 2831,
+      "latencyMs": {
+        "min": 2.236,
+        "mean": 9.118,
+        "p50": 8.389,
+        "p75": 10.38,
+        "p90": 12.856,
+        "p95": 14.841,
+        "p99": 19.228,
+        "max": 38.364
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.489,
+        "postgresCpuMsPerRequest": 0.205,
+        "processPeakRssMb": 154.6,
+        "eventLoopLagMs": {
+          "mean": 3.094,
+          "p50": 2.615,
+          "p99": 7.43,
+          "max": 17.416
+        },
+        "gc": {
+          "count": 301,
+          "pauseMs": 588.7
+        },
+        "peakHeapUsedMb": 73.8,
+        "peakRssMb": 154.2
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "data-1y",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 11805,
+      "failures": 0,
+      "statuses": {
+        "200": 11805
+      },
+      "throughputRps": 785.67,
+      "drainSeconds": 0.02,
+      "meanResponseBytes": 34434,
+      "latencyMs": {
+        "min": 9.056,
+        "mean": 25.392,
+        "p50": 23.984,
+        "p75": 29.163,
+        "p90": 35.26,
+        "p95": 39.407,
+        "p99": 46.37,
+        "max": 60.918
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 1.272,
+        "postgresCpuMsPerRequest": 1.441,
+        "processPeakRssMb": 167,
+        "eventLoopLagMs": {
+          "mean": 7.984,
+          "p50": 7.495,
+          "p99": 16.203,
+          "max": 24.887
+        },
+        "gc": {
+          "count": 276,
+          "pauseMs": 549.8
+        },
+        "peakHeapUsedMb": 81.2,
+        "peakRssMb": 166
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "data-full",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 468,
+      "failures": 0,
+      "statuses": {
+        "200": 468
+      },
+      "throughputRps": 29.87,
+      "drainSeconds": 0.58,
+      "meanResponseBytes": 1376821,
+      "latencyMs": {
+        "min": 381.785,
+        "mean": 638.572,
+        "p50": 614.258,
+        "p75": 725.927,
+        "p90": 803.392,
+        "p95": 845.292,
+        "p99": 952.511,
+        "max": 1058.453
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 32.543,
+        "postgresCpuMsPerRequest": 50.534,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 212.456,
+          "p50": 210.026,
+          "p99": 338.739,
+          "max": 344.506
+        },
+        "gc": {
+          "count": 333,
+          "pauseMs": 1961.9
+        },
+        "peakHeapUsedMb": 62.7,
+        "peakRssMb": 215.3
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "avg-1y",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 23551,
+      "failures": 0,
+      "statuses": {
+        "200": 23551
+      },
+      "throughputRps": 1568.73,
+      "drainSeconds": 0.01,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 1.755,
+        "mean": 12.733,
+        "p50": 12.414,
+        "p75": 15.011,
+        "p90": 17.538,
+        "p95": 19.236,
+        "p99": 23.422,
+        "max": 36.017
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.476,
+        "postgresCpuMsPerRequest": 1.501,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 2.282,
+          "p50": 2.129,
+          "p99": 7.823,
+          "max": 12.206
+        },
+        "gc": {
+          "count": 187,
+          "pauseMs": 661.6
+        },
+        "peakHeapUsedMb": 71.9,
+        "peakRssMb": 156.4
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "avg-full",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 983,
+      "failures": 0,
+      "statuses": {
+        "200": 983
+      },
+      "throughputRps": 64.2,
+      "drainSeconds": 0.26,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 185.651,
+        "mean": 304.281,
+        "p50": 304.646,
+        "p75": 330.74,
+        "p90": 353.538,
+        "p95": 363.413,
+        "p99": 385.067,
+        "max": 428.035
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 1.18,
+        "postgresCpuMsPerRequest": 58.149,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.459,
+          "p50": 0.086,
+          "p99": 7.856,
+          "max": 26.23
+        },
+        "gc": {
+          "count": 19,
+          "pauseMs": 137.2
+        },
+        "peakHeapUsedMb": 39.9,
+        "peakRssMb": 131.9
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "max-full",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 1009,
+      "failures": 0,
+      "statuses": {
+        "200": 1009
+      },
+      "throughputRps": 65.93,
+      "drainSeconds": 0.22,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 194.389,
+        "mean": 296.486,
+        "p50": 295.213,
+        "p75": 324.955,
+        "p90": 352.068,
+        "p95": 366.772,
+        "p99": 404.444,
+        "max": 445.53
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 1.229,
+        "postgresCpuMsPerRequest": 56.145,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.517,
+          "p50": 0.084,
+          "p99": 8.2,
+          "max": 28.966
+        },
+        "gc": {
+          "count": 11,
+          "pauseMs": 97.7
+        },
+        "peakHeapUsedMb": 33.2,
+        "peakRssMb": 113.1
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "min-10y",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 4048,
+      "failures": 0,
+      "statuses": {
+        "200": 4048
+      },
+      "throughputRps": 268.53,
+      "drainSeconds": 0.05,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 35.895,
+        "mean": 74.076,
+        "p50": 73.088,
+        "p75": 82.829,
+        "p90": 91.872,
+        "p95": 97.068,
+        "p99": 108.284,
+        "max": 128.02
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.697,
+        "postgresCpuMsPerRequest": 13.463,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.811,
+          "p50": 0.089,
+          "p99": 9.592,
+          "max": 24.821
+        },
+        "gc": {
+          "count": 45,
+          "pauseMs": 344.4
+        },
+        "peakHeapUsedMb": 33.2,
+        "peakRssMb": 115.3
+      }
+    },
+    {
+      "suite": "load",
+      "scenario": "mixed",
+      "mode": "closed",
+      "connections": 20,
+      "rate": null,
+      "durationSeconds": 15,
+      "requests": 3465,
+      "failures": 0,
+      "statuses": {
+        "200": 3465
+      },
+      "throughputRps": 229.67,
+      "drainSeconds": 0.1,
+      "meanResponseBytes": 82316,
+      "latencyMs": {
+        "min": 2.54,
+        "mean": 86.555,
+        "p50": 65.13,
+        "p75": 128.263,
+        "p90": 187.375,
+        "p95": 214.57,
+        "p99": 268.819,
+        "max": 385.539
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 2.459,
+        "postgresCpuMsPerRequest": 13.411,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 4.489,
+          "p50": 0.339,
+          "p99": 54.083,
+          "max": 102.416
+        },
+        "gc": {
+          "count": 163,
+          "pauseMs": 1405.6
+        },
+        "peakHeapUsedMb": 82.6,
+        "peakRssMb": 185
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-01y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 7230,
+      "failures": 0,
+      "statuses": {
+        "200": 7230
+      },
+      "throughputRps": 1445.8,
+      "drainSeconds": 0,
+      "meanResponseBytes": 26,
+      "latencyMs": {
+        "min": 0.351,
+        "mean": 0.69,
+        "p50": 0.627,
+        "p75": 0.76,
+        "p90": 0.911,
+        "p95": 1.005,
+        "p99": 2.08,
+        "max": 16.83
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.553,
+        "postgresCpuMsPerRequest": 0.105,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.025,
+          "p50": 0,
+          "p99": 1.171,
+          "max": 13.385
+        },
+        "gc": {
+          "count": 60,
+          "pauseMs": 122.7
+        },
+        "peakHeapUsedMb": 79.8,
+        "peakRssMb": 185.8
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-01y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6170,
+      "failures": 0,
+      "statuses": {
+        "200": 6170
+      },
+      "throughputRps": 1233.8,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2731,
+      "latencyMs": {
+        "min": 0.411,
+        "mean": 0.808,
+        "p50": 0.742,
+        "p75": 0.897,
+        "p90": 1.051,
+        "p95": 1.169,
+        "p99": 2.632,
+        "max": 8.897
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.645,
+        "postgresCpuMsPerRequest": 0.112,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.023,
+          "p50": 0.001,
+          "p99": 1.2,
+          "max": 8.273
+        },
+        "gc": {
+          "count": 60,
+          "pauseMs": 111.4
+        },
+        "peakHeapUsedMb": 67.8,
+        "peakRssMb": 170.1
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-02y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 7270,
+      "failures": 0,
+      "statuses": {
+        "200": 7270
+      },
+      "throughputRps": 1453.8,
+      "drainSeconds": 0,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 0.343,
+        "mean": 0.686,
+        "p50": 0.624,
+        "p75": 0.777,
+        "p90": 0.917,
+        "p95": 1.025,
+        "p99": 2.212,
+        "max": 8.351
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.554,
+        "postgresCpuMsPerRequest": 0.103,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.021,
+          "p50": 0,
+          "p99": 1.065,
+          "max": 7.188
+        },
+        "gc": {
+          "count": 58,
+          "pauseMs": 118.7
+        },
+        "peakHeapUsedMb": 68.5,
+        "peakRssMb": 172.5
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-02y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6143,
+      "failures": 0,
+      "statuses": {
+        "200": 6143
+      },
+      "throughputRps": 1228.4,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2738,
+      "latencyMs": {
+        "min": 0.424,
+        "mean": 0.812,
+        "p50": 0.745,
+        "p75": 0.905,
+        "p90": 1.04,
+        "p95": 1.162,
+        "p99": 2.559,
+        "max": 7.569
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.645,
+        "postgresCpuMsPerRequest": 0.109,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.023,
+          "p50": 0,
+          "p99": 1.114,
+          "max": 3.473
+        },
+        "gc": {
+          "count": 60,
+          "pauseMs": 104.8
+        },
+        "peakHeapUsedMb": 66.4,
+        "peakRssMb": 172.5
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-05y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 7071,
+      "failures": 0,
+      "statuses": {
+        "200": 7071
+      },
+      "throughputRps": 1414,
+      "drainSeconds": 0,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 0.35,
+        "mean": 0.705,
+        "p50": 0.647,
+        "p75": 0.809,
+        "p90": 0.958,
+        "p95": 1.069,
+        "p99": 2.272,
+        "max": 9.213
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.559,
+        "postgresCpuMsPerRequest": 0.139,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.018,
+          "p50": 0,
+          "p99": 1.032,
+          "max": 3.887
+        },
+        "gc": {
+          "count": 59,
+          "pauseMs": 111.5
+        },
+        "peakHeapUsedMb": 67.5,
+        "peakRssMb": 169.4
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-05y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6023,
+      "failures": 0,
+      "statuses": {
+        "200": 6023
+      },
+      "throughputRps": 1204.4,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2732,
+      "latencyMs": {
+        "min": 0.427,
+        "mean": 0.828,
+        "p50": 0.778,
+        "p75": 0.92,
+        "p90": 1.049,
+        "p95": 1.133,
+        "p99": 2.281,
+        "max": 9.339
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.664,
+        "postgresCpuMsPerRequest": 0.115,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.015,
+          "p50": 0.001,
+          "p99": 1.003,
+          "max": 4.194
+        },
+        "gc": {
+          "count": 60,
+          "pauseMs": 112.4
+        },
+        "peakHeapUsedMb": 63.4,
+        "peakRssMb": 169.7
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-10y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 7252,
+      "failures": 0,
+      "statuses": {
+        "200": 7252
+      },
+      "throughputRps": 1450.2,
+      "drainSeconds": 0,
+      "meanResponseBytes": 12,
+      "latencyMs": {
+        "min": 0.352,
+        "mean": 0.687,
+        "p50": 0.617,
+        "p75": 0.774,
+        "p90": 0.927,
+        "p95": 1.028,
+        "p99": 2.183,
+        "max": 9.421
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.552,
+        "postgresCpuMsPerRequest": 0.108,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.026,
+          "p50": 0,
+          "p99": 1.269,
+          "max": 7.864
+        },
+        "gc": {
+          "count": 59,
+          "pauseMs": 114.9
+        },
+        "peakHeapUsedMb": 67.4,
+        "peakRssMb": 172.1
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-10y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6264,
+      "failures": 0,
+      "statuses": {
+        "200": 6264
+      },
+      "throughputRps": 1252.6,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2735,
+      "latencyMs": {
+        "min": 0.417,
+        "mean": 0.796,
+        "p50": 0.726,
+        "p75": 0.886,
+        "p90": 1.06,
+        "p95": 1.16,
+        "p99": 2.406,
+        "max": 8.303
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.639,
+        "postgresCpuMsPerRequest": 0.112,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.02,
+          "p50": 0.004,
+          "p99": 1.032,
+          "max": 7.471
+        },
+        "gc": {
+          "count": 61,
+          "pauseMs": 108.9
+        },
+        "peakHeapUsedMb": 66.2,
+        "peakRssMb": 167.3
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-20y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6366,
+      "failures": 0,
+      "statuses": {
+        "200": 6366
+      },
+      "throughputRps": 1273,
+      "drainSeconds": 0,
+      "meanResponseBytes": 25,
+      "latencyMs": {
+        "min": 0.389,
+        "mean": 0.783,
+        "p50": 0.713,
+        "p75": 0.867,
+        "p90": 1.024,
+        "p95": 1.114,
+        "p99": 2.648,
+        "max": 48.956
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.609,
+        "postgresCpuMsPerRequest": 0.121,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.024,
+          "p50": 0.002,
+          "p99": 1.189,
+          "max": 4.333
+        },
+        "gc": {
+          "count": 52,
+          "pauseMs": 117.1
+        },
+        "peakHeapUsedMb": 66.8,
+        "peakRssMb": 172.2
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-20y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6237,
+      "failures": 0,
+      "statuses": {
+        "200": 6237
+      },
+      "throughputRps": 1247.2,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2728,
+      "latencyMs": {
+        "min": 0.437,
+        "mean": 0.799,
+        "p50": 0.751,
+        "p75": 0.93,
+        "p90": 1.03,
+        "p95": 1.127,
+        "p99": 2.378,
+        "max": 9.104
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.651,
+        "postgresCpuMsPerRequest": 0.112,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.017,
+          "p50": 0,
+          "p99": 1.023,
+          "max": 6.438
+        },
+        "gc": {
+          "count": 61,
+          "pauseMs": 118.1
+        },
+        "peakHeapUsedMb": 65.9,
+        "peakRssMb": 169.5
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-avg-40y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6989,
+      "failures": 0,
+      "statuses": {
+        "200": 6989
+      },
+      "throughputRps": 1397.6,
+      "drainSeconds": 0,
+      "meanResponseBytes": 26,
+      "latencyMs": {
+        "min": 0.335,
+        "mean": 0.713,
+        "p50": 0.652,
+        "p75": 0.83,
+        "p90": 1.014,
+        "p95": 1.125,
+        "p99": 2.004,
+        "max": 12.014
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.577,
+        "postgresCpuMsPerRequest": 0.117,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.019,
+          "p50": 0.002,
+          "p99": 1.018,
+          "max": 3.592
+        },
+        "gc": {
+          "count": 56,
+          "pauseMs": 118.6
+        },
+        "peakHeapUsedMb": 67.8,
+        "peakRssMb": 172.2
+      }
+    },
+    {
+      "suite": "depth",
+      "scenario": "depth-data-40y",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 5,
+      "requests": 6464,
+      "failures": 0,
+      "statuses": {
+        "200": 6464
+      },
+      "throughputRps": 1292.6,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2759,
+      "latencyMs": {
+        "min": 0.406,
+        "mean": 0.771,
+        "p50": 0.696,
+        "p75": 0.865,
+        "p90": 1.013,
+        "p95": 1.11,
+        "p99": 2.529,
+        "max": 12.397
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.627,
+        "postgresCpuMsPerRequest": 0.105,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.022,
+          "p50": 0.001,
+          "p99": 0.983,
+          "max": 6.84
+        },
+        "gc": {
+          "count": 64,
+          "pauseMs": 118.4
+        },
+        "peakHeapUsedMb": 65,
+        "peakRssMb": 169.9
+      }
+    },
+    {
+      "suite": "ingest",
+      "scenario": "ingest",
+      "mode": "closed",
+      "connections": 1,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 5840,
+      "failures": 0,
+      "statuses": {
+        "200": 5840
+      },
+      "throughputRps": 729.88,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2,
+      "latencyMs": {
+        "min": 0.67,
+        "mean": 1.367,
+        "p50": 1.316,
+        "p75": 1.486,
+        "p90": 1.673,
+        "p95": 1.829,
+        "p99": 3.378,
+        "max": 41.883
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.817,
+        "postgresCpuMsPerRequest": 0.221,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.022,
+          "p50": 0,
+          "p99": 0.897,
+          "max": 5.173
+        },
+        "gc": {
+          "count": 47,
+          "pauseMs": 103.6
+        },
+        "peakHeapUsedMb": 69,
+        "peakRssMb": 170.5
+      }
+    },
+    {
+      "suite": "ingest",
+      "scenario": "ingest",
+      "mode": "closed",
+      "connections": 10,
+      "rate": null,
+      "durationSeconds": 8,
+      "requests": 18141,
+      "failures": 0,
+      "statuses": {
+        "200": 18141
+      },
+      "throughputRps": 2266.38,
+      "drainSeconds": 0,
+      "meanResponseBytes": 2,
+      "latencyMs": {
+        "min": 1.622,
+        "mean": 4.407,
+        "p50": 4.122,
+        "p75": 5.032,
+        "p90": 6.376,
+        "p95": 7.46,
+        "p99": 9.611,
+        "max": 31.098
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 0.472,
+        "postgresCpuMsPerRequest": 0.195,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.744,
+          "p50": 0.567,
+          "p99": 3.403,
+          "max": 6.274
+        },
+        "gc": {
+          "count": 142,
+          "pauseMs": 282.1
+        },
+        "peakHeapUsedMb": 72.6,
+        "peakRssMb": 176.1
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 2,
+      "durationSeconds": 20,
+      "requests": 40,
+      "failures": 0,
+      "statuses": {
+        "200": 40
+      },
+      "throughputRps": 2,
+      "drainSeconds": 0,
+      "meanResponseBytes": 71994,
+      "latencyMs": {
+        "min": 1.315,
+        "mean": 16.581,
+        "p50": 4.018,
+        "p75": 17.172,
+        "p90": 56.334,
+        "p95": 70.495,
+        "p99": 87.278,
+        "max": 87.278
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 20.5,
+        "postgresCpuMsPerRequest": 14.25,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.108,
+          "p50": 0.095,
+          "p99": 0.263,
+          "max": 15.368
+        },
+        "gc": {
+          "count": 22,
+          "pauseMs": 25.2
+        },
+        "peakHeapUsedMb": 39.7,
+        "peakRssMb": 158.2
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 5,
+      "durationSeconds": 20,
+      "requests": 100,
+      "failures": 0,
+      "statuses": {
+        "200": 100
+      },
+      "throughputRps": 5,
+      "drainSeconds": 0,
+      "meanResponseBytes": 45260,
+      "latencyMs": {
+        "min": 1.091,
+        "mean": 15.621,
+        "p50": 3.336,
+        "p75": 17.815,
+        "p90": 59.974,
+        "p95": 64.481,
+        "p99": 71.561,
+        "max": 77.165
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 8.3,
+        "postgresCpuMsPerRequest": 14.3,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.11,
+          "p50": 0.096,
+          "p99": 0.336,
+          "max": 11.722
+        },
+        "gc": {
+          "count": 18,
+          "pauseMs": 16.7
+        },
+        "peakHeapUsedMb": 22.9,
+        "peakRssMb": 95
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 10,
+      "durationSeconds": 20,
+      "requests": 200,
+      "failures": 0,
+      "statuses": {
+        "200": 200
+      },
+      "throughputRps": 10,
+      "drainSeconds": 0,
+      "meanResponseBytes": 60715,
+      "latencyMs": {
+        "min": 0.766,
+        "mean": 16.04,
+        "p50": 3.294,
+        "p75": 16.649,
+        "p90": 60.846,
+        "p95": 69.419,
+        "p99": 76.864,
+        "max": 89.279
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 6.25,
+        "postgresCpuMsPerRequest": 13.45,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.116,
+          "p50": 0.096,
+          "p99": 0.548,
+          "max": 13.057
+        },
+        "gc": {
+          "count": 21,
+          "pauseMs": 32.5
+        },
+        "peakHeapUsedMb": 26,
+        "peakRssMb": 102.9
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 20,
+      "durationSeconds": 20,
+      "requests": 400,
+      "failures": 0,
+      "statuses": {
+        "200": 400
+      },
+      "throughputRps": 20,
+      "drainSeconds": 0,
+      "meanResponseBytes": 58004,
+      "latencyMs": {
+        "min": 0.535,
+        "mean": 14.516,
+        "p50": 3.415,
+        "p75": 14.48,
+        "p90": 58.52,
+        "p95": 64.021,
+        "p99": 69.799,
+        "max": 73.79
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 4.6,
+        "postgresCpuMsPerRequest": 12.35,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.118,
+          "p50": 0.098,
+          "p99": 0.668,
+          "max": 17.006
+        },
+        "gc": {
+          "count": 18,
+          "pauseMs": 27.7
+        },
+        "peakHeapUsedMb": 35.4,
+        "peakRssMb": 120.1
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 50,
+      "durationSeconds": 20,
+      "requests": 1000,
+      "failures": 0,
+      "statuses": {
+        "200": 1000
+      },
+      "throughputRps": 49.9,
+      "drainSeconds": 0.03,
+      "meanResponseBytes": 77793,
+      "latencyMs": {
+        "min": -0.423,
+        "mean": 15.402,
+        "p50": 2.719,
+        "p75": 15.907,
+        "p90": 61.065,
+        "p95": 67.745,
+        "p99": 76.195,
+        "max": 141.964
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 3.67,
+        "postgresCpuMsPerRequest": 12.98,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.144,
+          "p50": 0.095,
+          "p99": 0.971,
+          "max": 49.692
+        },
+        "gc": {
+          "count": 54,
+          "pauseMs": 107.4
+        },
+        "peakHeapUsedMb": 37.7,
+        "peakRssMb": 125.6
+      }
+    },
+    {
+      "suite": "rate",
+      "scenario": "mixed",
+      "mode": "open",
+      "connections": null,
+      "rate": 100,
+      "durationSeconds": 20,
+      "requests": 2000,
+      "failures": 0,
+      "statuses": {
+        "200": 2000
+      },
+      "throughputRps": 99.95,
+      "drainSeconds": 0.01,
+      "meanResponseBytes": 79760,
+      "latencyMs": {
+        "min": -0.258,
+        "mean": 19.793,
+        "p50": 3.026,
+        "p75": 25.181,
+        "p90": 67.157,
+        "p95": 77.953,
+        "p99": 104.7,
+        "max": 210.212
+      },
+      "server": {
+        "nodeCpuMsPerRequest": 3.155,
+        "postgresCpuMsPerRequest": 14.25,
+        "processPeakRssMb": 219.7,
+        "eventLoopLagMs": {
+          "mean": 0.239,
+          "p50": 0.092,
+          "p99": 5.414,
+          "max": 55.197
+        },
+        "gc": {
+          "count": 111,
+          "pauseMs": 310.2
+        },
+        "peakHeapUsedMb": 45.3,
+        "peakRssMb": 133.2
+      }
+    }
+  ]
+}

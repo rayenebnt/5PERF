@@ -1,0 +1,8 @@
+Requêtes comparées            : 1104
+Codes HTTP de la référence    : {"200":909,"400":12,"404":4,"500":179}
+Réponses strictement égales   : 763
+Moyennes égales à 1e-9 près   : 162
+  dont écart relatif maximal  : 7.9e-15
+Plantages corrigés (500->200) : 179
+Écarts inattendus             : 0
+compare exit=0

@@ -1,0 +1,7 @@
+# Migration 002 rejouée pendant que l'application sert du trafic (base complète de 14,6 millions de lignes).
+# Lectures : trafic mixte, 8 utilisateurs. Écritures : POST /weather/data, 2 robots. Fenêtre de 45 s ;
+# la migration démarre à la 6e seconde et dure 27,8 s. Temps en millisecondes.
+{"scenario":"mixed","requests":11974,"failures":0,"statuses":{"200":11974},"transportErrors":{},"rps":265.91,"p50":10.244,"p99":195.22,"max":1417.563}
+{"scenario":"ingest","requests":4903,"failures":0,"statuses":{"200":4903},"transportErrors":{},"rps":108.91,"p50":12.061,"p99":91.539,"max":1274.386}
+# Erreurs journalisées par l'application pendant le tir : 0.
+# Après migration : clé primaire couvrante en place, les 4 903 mesures écrites pendant la migration sont présentes.

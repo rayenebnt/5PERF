@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title id="t">Temps de réponse médian à chaque étape de l’optimisation</title>
+<desc id="d">Consultation · 30 jours : Origine 169 ms, Code optimisé, base inchangée 0,92 ms, Code optimisé + migration 0,73 ms ; Moyenne · 40 ans : Origine 89,2 ms, Code optimisé, base inchangée 55,1 ms, Code optimisé + migration 3,08 ms ; Export complet · 40 ans : Origine 127 ms, Code optimisé, base inchangée 61,8 ms, Code optimisé + migration 21,9 ms</desc>
+<rect width="860" height="400" rx="8" fill="#fcfcfb"/>
+<text x="28" y="34" font-size="16" fill="#0b0b0b" text-anchor="start" font-weight="600">Ce que chaque étape apporte</text>
+<text x="28" y="56" font-size="13" fill="#898781" text-anchor="start" font-weight="400">Temps de réponse médian (ms), un utilisateur · chaque panneau a sa propre échelle</text>
+<rect x="28" y="74" width="12" height="12" rx="2" fill="#7b7974"/>
+<text x="46" y="84" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Origine</text>
+<rect x="119.69999999999999" y="74" width="12" height="12" rx="2" fill="#6da7ec"/>
+<text x="137.7" y="84" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Code optimisé, base inchangée</text>
+<rect x="367.59999999999997" y="74" width="12" height="12" rx="2" fill="#1c5cab"/>
+<text x="385.59999999999997" y="84" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Code optimisé + migration</text>
+<text x="36" y="122" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="600">Consultation · 30 jours</text>
+<line x1="36" y1="342" x2="280" y2="342" stroke="#c3c2b7" stroke-width="1"/>
+<path d="M64.66666666666666,342 V178 Q64.66666666666666,174 68.66666666666666,174 H84.66666666666666 Q88.66666666666666,174 88.66666666666666,178 V342 Z" fill="#7b7974"/>
+<text x="76.66666666666666" y="166" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">169 ms</text>
+<text x="76.66666666666666" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Origine</text>
+<path d="M146,342 V342 Q146,340 148,340 H168 Q170,340 170,342 V342 Z" fill="#6da7ec"/>
+<text x="158" y="332" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">0,92 ms</text>
+<text x="158" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code</text>
+<path d="M227.33333333333331,342 V342 Q227.33333333333331,340 229.33333333333331,340 H249.33333333333331 Q251.33333333333331,340 251.33333333333331,342 V342 Z" fill="#1c5cab"/>
+<text x="239.33333333333331" y="332" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">0,73 ms</text>
+<text x="239.33333333333331" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code + migration</text>
+<text x="304" y="122" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="600">Moyenne · 40 ans</text>
+<line x1="304" y1="342" x2="548" y2="342" stroke="#c3c2b7" stroke-width="1"/>
+<path d="M332.6666666666667,342 V178 Q332.6666666666667,174 336.6666666666667,174 H352.6666666666667 Q356.6666666666667,174 356.6666666666667,178 V342 Z" fill="#7b7974"/>
+<text x="344.6666666666667" y="166" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">89,2 ms</text>
+<text x="344.6666666666667" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Origine</text>
+<path d="M414,342 V242.1782302551913 Q414,238.1782302551913 418,238.1782302551913 H434 Q438,238.1782302551913 438,242.1782302551913 V342 Z" fill="#6da7ec"/>
+<text x="426" y="230.1782302551913" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">55,1 ms</text>
+<text x="426" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code</text>
+<path d="M495.3333333333333,342 V340.1889043369063 Q495.3333333333333,336.1889043369063 499.3333333333333,336.1889043369063 H515.3333333333333 Q519.3333333333333,336.1889043369063 519.3333333333333,340.1889043369063 V342 Z" fill="#1c5cab"/>
+<text x="507.3333333333333" y="328.1889043369063" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">3,08 ms</text>
+<text x="507.3333333333333" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code + migration</text>
+<text x="572" y="122" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="600">Export complet · 40 ans</text>
+<line x1="572" y1="342" x2="816" y2="342" stroke="#c3c2b7" stroke-width="1"/>
+<path d="M600.6666666666666,342 V178 Q600.6666666666666,174 604.6666666666666,174 H620.6666666666666 Q624.6666666666666,174 624.6666666666666,178 V342 Z" fill="#7b7974"/>
+<text x="612.6666666666666" y="166" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">127 ms</text>
+<text x="612.6666666666666" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Origine</text>
+<path d="M682,342 V263.9851397980213 Q682,259.9851397980213 686,259.9851397980213 H702 Q706,259.9851397980213 706,263.9851397980213 V342 Z" fill="#6da7ec"/>
+<text x="694" y="251.9851397980213" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">61,8 ms</text>
+<text x="694" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code</text>
+<path d="M763.3333333333333,342 V317.01417325321563 Q763.3333333333333,313.01417325321563 767.3333333333333,313.01417325321563 H783.3333333333333 Q787.3333333333333,313.01417325321563 787.3333333333333,317.01417325321563 V342 Z" fill="#1c5cab"/>
+<text x="775.3333333333333" y="305.01417325321563" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" style="font-variant-numeric: tabular-nums">21,9 ms</text>
+<text x="775.3333333333333" y="362" font-size="12" fill="#898781" text-anchor="middle" font-weight="400">Code + migration</text>
+</svg>

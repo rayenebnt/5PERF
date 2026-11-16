@@ -1,0 +1,89 @@
+=== [WeatherTrack_legacy] Origine : la seule lecture de l'application
+SELECT * FROM weather WHERE location = 'Station-0500'
+Bitmap Heap Scan on weather  (cost=621.07..40668.03 rows=14518 width=27) (actual time=6.265..27.370 rows=14610 loops=1)
+  Recheck Cond: ((location)::text = 'Station-0500'::text)
+  Heap Blocks: exact=14610
+  Buffers: shared hit=13500 read=1243
+  ->  Bitmap Index Scan on weather_pkey  (cost=0.00..617.44 rows=14518 width=0) (actual time=3.848..3.849 rows=14610 loops=1)
+        Index Cond: ((location)::text = 'Station-0500'::text)
+        Buffers: shared hit=1 read=132
+Planning:
+  Buffers: shared hit=64 read=17
+Planning Time: 0.425 ms
+Execution Time: 28.320 ms
+
+=== [WeatherTrack_legacy] Code optimisé, base non migrée : consultation de 30 jours
+SELECT location, date, COALESCE(temperature, 0) AS temperature, COALESCE(humidity, 0) AS humidity FROM weather WHERE location = 'Station-0500' AND date > COALESCE('2010-03-01'::date, '-infinity') AND date <= COALESCE('2010-03-31'::date, 'infinity') ORDER BY date
+Index Scan using weather_pkey on weather  (cost=0.56..109.14 rows=26 width=80) (actual time=0.056..0.134 rows=30 loops=1)
+  Index Cond: (((location)::text = 'Station-0500'::text) AND (date > '2010-03-01'::date) AND (date <= '2010-03-31'::date))
+  Buffers: shared hit=34
+Planning:
+  Buffers: shared hit=100
+Planning Time: 0.549 ms
+Execution Time: 0.163 ms
+
+=== [WeatherTrack_legacy] Code optimisé, base non migrée : moyenne sur 40 ans
+SELECT avg(COALESCE(temperature, 0)) AS value FROM weather WHERE location = 'Station-0500' AND date > COALESCE(NULL::date, '-infinity') AND date <= COALESCE(NULL::date, 'infinity')
+Aggregate  (cost=40842.22..40842.23 rows=1 width=32) (actual time=22.696..22.697 rows=1 loops=1)
+  Buffers: shared hit=14743
+  ->  Bitmap Heap Scan on weather  (cost=693.63..40805.93 rows=14515 width=6) (actual time=5.655..20.439 rows=14610 loops=1)
+        Recheck Cond: (((location)::text = 'Station-0500'::text) AND (date > '-infinity'::date) AND (date <= 'infinity'::date))
+        Heap Blocks: exact=14610
+        Buffers: shared hit=14743
+        ->  Bitmap Index Scan on weather_pkey  (cost=0.00..690.00 rows=14515 width=0) (actual time=3.266..3.266 rows=14610 loops=1)
+              Index Cond: (((location)::text = 'Station-0500'::text) AND (date > '-infinity'::date) AND (date <= 'infinity'::date))
+              Buffers: shared hit=133
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.361 ms
+Execution Time: 22.808 ms
+
+=== [WeatherTrack] Code optimisé + migration : consultation de 30 jours
+SELECT location, date, COALESCE(temperature, 0) AS temperature, COALESCE(humidity, 0) AS humidity FROM weather WHERE location = 'Station-0500' AND date > COALESCE('2010-03-01'::date, '-infinity') AND date <= COALESCE('2010-03-31'::date, 'infinity') ORDER BY date
+Index Only Scan using weather_pkey on weather  (cost=0.56..5.21 rows=29 width=80) (actual time=0.048..0.053 rows=30 loops=1)
+  Index Cond: ((location = 'Station-0500'::text) AND (date > '2010-03-01'::date) AND (date <= '2010-03-31'::date))
+  Heap Fetches: 0
+  Buffers: shared hit=5
+Planning:
+  Buffers: shared hit=106
+Planning Time: 0.531 ms
+Execution Time: 0.080 ms
+
+=== [WeatherTrack] Code optimisé + migration : moyenne sur 40 ans
+SELECT avg(COALESCE(temperature, 0)) AS value FROM weather WHERE location = 'Station-0500' AND date > COALESCE(NULL::date, '-infinity') AND date <= COALESCE(NULL::date, 'infinity')
+Aggregate  (cost=715.64..715.65 rows=1 width=32) (actual time=3.628..3.628 rows=1 loops=1)
+  Buffers: shared hit=96
+  ->  Index Only Scan using weather_pkey on weather  (cost=0.56..679.33 rows=14523 width=6) (actual time=0.033..2.198 rows=14610 loops=1)
+        Index Cond: ((location = 'Station-0500'::text) AND (date > '-infinity'::date) AND (date <= 'infinity'::date))
+        Heap Fetches: 0
+        Buffers: shared hit=96
+Planning:
+  Buffers: shared hit=113
+Planning Time: 0.330 ms
+Execution Time: 3.671 ms
+
+=== [WeatherTrack] Code optimisé + migration : export des 40 ans
+SELECT location, date, COALESCE(temperature, 0) AS temperature, COALESCE(humidity, 0) AS humidity FROM weather WHERE location = 'Station-0500' AND date > COALESCE(NULL::date, '-infinity') AND date <= COALESCE(NULL::date, 'infinity') ORDER BY date
+Index Only Scan using weather_pkey on weather  (cost=0.56..679.33 rows=14523 width=80) (actual time=0.040..2.281 rows=14610 loops=1)
+  Index Cond: ((location = 'Station-0500'::text) AND (date > '-infinity'::date) AND (date <= 'infinity'::date))
+  Heap Fetches: 0
+  Buffers: shared hit=96
+Planning:
+  Buffers: shared hit=106
+Planning Time: 0.351 ms
+Execution Time: 2.919 ms
+
+=== [WeatherTrack_legacy] tailles
+   relation   | taille | pages  
+--------------+--------+--------
+ weather      | 838 MB | 107237
+ weather_pkey | 998 MB | 127737
+(2 rows)
+
+=== [WeatherTrack] tailles
+   relation   | taille | pages  
+--------------+--------+--------
+ weather      | 840 MB | 107481
+ weather_pkey | 692 MB |  88259
+(2 rows)
+

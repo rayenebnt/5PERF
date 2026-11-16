@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 566" width="860" height="566" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title id="t">Temps de réponse médian avant et après optimisation</title>
+<desc id="d">Consultation · 30 jours : 169 ms puis 0,73 ms ; Consultation · 1 an : 177 ms puis 1,42 ms ; Export complet · 40 ans : 127 ms puis 21,9 ms ; Moyenne · 1 an : 155 ms puis 0,60 ms ; Moyenne · 40 ans : 89,2 ms puis 3,08 ms ; Maximum · 40 ans : 99,5 ms puis 3,06 ms ; Minimum · 10 ans : 166 ms puis 1,31 ms</desc>
+<rect width="860" height="566" rx="8" fill="#fcfcfb"/>
+<text x="28" y="34" font-size="16" fill="#0b0b0b" text-anchor="start" font-weight="600">Temps de réponse médian, un utilisateur</text>
+<text x="28" y="56" font-size="13" fill="#898781" text-anchor="start" font-weight="400">Millisecondes · plus court = mieux</text>
+<rect x="28" y="74" width="12" height="12" rx="2" fill="#7b7974"/>
+<text x="46" y="84" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Origine</text>
+<rect x="119.69999999999999" y="74" width="12" height="12" rx="2" fill="#1c5cab"/>
+<text x="137.7" y="84" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Code optimisé + migration</text>
+<line x1="218" y1="108" x2="218" y2="522" stroke="#c3c2b7" stroke-width="1"/>
+<text x="218" y="542" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="341" y1="108" x2="341" y2="522" stroke="#e1e0d9" stroke-width="1"/>
+<text x="341" y="542" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">50</text>
+<line x1="464" y1="108" x2="464" y2="522" stroke="#e1e0d9" stroke-width="1"/>
+<text x="464" y="542" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="587" y1="108" x2="587" y2="522" stroke="#e1e0d9" stroke-width="1"/>
+<text x="587" y="542" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">150</text>
+<line x1="710" y1="108" x2="710" y2="522" stroke="#e1e0d9" stroke-width="1"/>
+<text x="710" y="542" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" style="font-variant-numeric: tabular-nums">200</text>
+<text x="206" y="143" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Consultation · 30 jours</text>
+<path d="M218,120 H628.5469 Q632.5469,120 632.5469,124 V134 Q632.5469,138 628.5469,138 H218 Z" fill="#7b7974"/>
+<text x="640.5469" y="134" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">169 ms</text>
+<path d="M218,140 H218 Q220,140 220,142 V156 Q220,158 218,158 H218 Z" fill="#1c5cab"/>
+<text x="228" y="154" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">0,73 ms  (÷ 230)</text>
+<text x="206" y="201" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Consultation · 1 an</text>
+<path d="M218,178 H648.9501399999999 Q652.9501399999999,178 652.9501399999999,182 V192 Q652.9501399999999,196 648.9501399999999,196 H218 Z" fill="#7b7974"/>
+<text x="660.9501399999999" y="192" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">177 ms</text>
+<path d="M218,198 H218 Q221.50304,198 221.50304,201.50304 V212.49696 Q221.50304,216 218,216 H218 Z" fill="#1c5cab"/>
+<text x="229.50304" y="212" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,42 ms  (÷ 124)</text>
+<text x="206" y="259" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Export complet · 40 ans</text>
+<path d="M218,236 H525.55162 Q529.55162,236 529.55162,240 V250 Q529.55162,254 525.55162,254 H218 Z" fill="#7b7974"/>
+<text x="537.55162" y="250" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">127 ms</text>
+<path d="M218,256 H267.75346 Q271.75346,256 271.75346,260 V270 Q271.75346,274 267.75346,274 H218 Z" fill="#1c5cab"/>
+<text x="279.75346" y="270" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">21,9 ms  (÷ 5,8)</text>
+<text x="206" y="317" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Moyenne · 1 an</text>
+<path d="M218,294 H595.82644 Q599.82644,294 599.82644,298 V308 Q599.82644,312 595.82644,312 H218 Z" fill="#7b7974"/>
+<text x="607.82644" y="308" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">155 ms</text>
+<path d="M218,314 H218 Q220,314 220,316 V330 Q220,332 218,332 H218 Z" fill="#1c5cab"/>
+<text x="228" y="328" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">0,60 ms  (÷ 257)</text>
+<text x="206" y="375" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Moyenne · 40 ans</text>
+<path d="M218,352 H433.40247999999997 Q437.40247999999997,352 437.40247999999997,356 V366 Q437.40247999999997,370 433.40247999999997,370 H218 Z" fill="#7b7974"/>
+<text x="445.40247999999997" y="366" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">89,2 ms</text>
+<path d="M218,372 H221.5891 Q225.5891,372 225.5891,376 V386 Q225.5891,390 221.5891,390 H218 Z" fill="#1c5cab"/>
+<text x="233.5891" y="386" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,08 ms  (÷ 29)</text>
+<text x="206" y="433" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Maximum · 40 ans</text>
+<path d="M218,410 H458.6962 Q462.6962,410 462.6962,414 V424 Q462.6962,428 458.6962,428 H218 Z" fill="#7b7974"/>
+<text x="470.6962" y="424" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">99,5 ms</text>
+<path d="M218,430 H221.5153 Q225.5153,430 225.5153,434 V444 Q225.5153,448 221.5153,448 H218 Z" fill="#1c5cab"/>
+<text x="233.5153" y="444" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,06 ms  (÷ 33)</text>
+<text x="206" y="491" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="400">Minimum · 10 ans</text>
+<path d="M218,468 H621.60478 Q625.60478,468 625.60478,472 V482 Q625.60478,486 621.60478,486 H218 Z" fill="#7b7974"/>
+<text x="633.60478" y="482" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" style="font-variant-numeric: tabular-nums">166 ms</text>
+<path d="M218,488 H218 Q221.22998,488 221.22998,491.22998 V502.77002 Q221.22998,506 218,506 H218 Z" fill="#1c5cab"/>
+<text x="229.22998" y="502" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,31 ms  (÷ 126)</text>
+</svg>

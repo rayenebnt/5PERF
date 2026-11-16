@@ -1,0 +1,29 @@
+# Comparaisons A/B sur l'état final, 20 utilisateurs, deux passages alternés.
+# A : état final. B : mêmes sources sans requêtes préparées nommées. C : mêmes sources sans journal d'accès.
+# Colonnes : scénario:utilisateurs — débit (req/s) — temps de réponse (ms) — CPU par requête (ms),
+# côté Node.js puis PostgreSQL — taille moyenne des réponses (octets) — requêtes en échec.
+### passage 1 — A. état final
+état final             avg-1y:20          rps     2781  p50    6.466  p95   12.263  p99   16.071  nodeCPU 0.390  pgCPU 0.172  bytes 25  fail 0
+état final             data-30d:20        rps  2275.83  p50    8.155  p95   13.887  p99   17.812  nodeCPU 0.469  pgCPU 0.104  bytes 2831  fail 0
+état final             avg-full:20        rps  1104.08  p50   17.169  p95   28.434  p99   35.768  nodeCPU 0.437  pgCPU 2.742  bytes 25  fail 0
+### passage 1 — B. sans requêtes préparées
+sans requêtes préparées avg-1y:20          rps   2546.5  p50    7.256  p95   12.857  p99   16.541  nodeCPU 0.414  pgCPU 0.296  bytes 25  fail 0
+sans requêtes préparées data-30d:20        rps  2338.92  p50    7.998  p95   13.065  p99   17.476  nodeCPU 0.452  pgCPU 0.215  bytes 2831  fail 0
+sans requêtes préparées avg-full:20        rps  1122.25  p50   16.389  p95   28.622  p99   36.834  nodeCPU 0.463  pgCPU 2.807  bytes 25  fail 0
+### passage 1 — C. sans journal d'accès
+sans journal d'accès   avg-1y:20          rps  3752.58  p50      4.8  p95    8.682  p99   11.733  nodeCPU 0.282  pgCPU 0.158  bytes 25  fail 0
+sans journal d'accès   data-30d:20        rps  2915.67  p50    6.294  p95   11.439  p99   14.917  nodeCPU 0.365  pgCPU 0.103  bytes 2831  fail 0
+sans journal d'accès   avg-full:20        rps  1154.25  p50   16.131  p95   27.315  p99   35.695  nodeCPU 0.389  pgCPU 2.804  bytes 25  fail 0
+### passage 2 — A. état final
+état final             avg-1y:20          rps   2668.5  p50    6.829  p95   12.363  p99   15.643  nodeCPU 0.405  pgCPU 0.183  bytes 25  fail 0
+état final             data-30d:20        rps  2156.17  p50     8.69  p95   14.265  p99   18.544  nodeCPU 0.490  pgCPU 0.109  bytes 2831  fail 0
+état final             avg-full:20        rps     1138  p50   16.342  p95   28.247  p99    35.39  nodeCPU 0.461  pgCPU 2.714  bytes 25  fail 0
+### passage 2 — B. sans requêtes préparées
+sans requêtes préparées avg-1y:20          rps  2522.33  p50    7.257  p95   12.853  p99   18.144  nodeCPU 0.410  pgCPU 0.300  bytes 25  fail 0
+sans requêtes préparées data-30d:20        rps  2234.33  p50    8.329  p95   13.811  p99   17.579  nodeCPU 0.471  pgCPU 0.221  bytes 2831  fail 0
+sans requêtes préparées avg-full:20        rps  1131.83  p50   16.606  p95   27.398  p99   34.245  nodeCPU 0.454  pgCPU 2.777  bytes 25  fail 0
+### passage 2 — C. sans journal d'accès
+sans journal d'accès   avg-1y:20          rps     3655  p50    5.012  p95    8.828  p99   11.427  nodeCPU 0.293  pgCPU 0.159  bytes 25  fail 0
+sans journal d'accès   data-30d:20        rps  2812.25  p50    6.558  p95   11.548  p99   14.712  nodeCPU 0.378  pgCPU 0.102  bytes 2831  fail 0
+sans journal d'accès   avg-full:20        rps  1195.67  p50   15.617  p95   26.446  p99   33.708  nodeCPU 0.337  pgCPU 2.693  bytes 25  fail 0
+terminé

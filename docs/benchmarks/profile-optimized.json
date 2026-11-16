@@ -1,0 +1,122 @@
+{
+  "activeCpuMs": 19219,
+  "categories": [
+    {
+      "name": "Pilote PostgreSQL (décodage des lignes reçues)",
+      "ms": 7879,
+      "share": 0.41
+    },
+    {
+      "name": "Framework HTTP (express et middlewares)",
+      "ms": 7072,
+      "share": 0.368
+    },
+    {
+      "name": "Code applicatif (service / contrôleur)",
+      "ms": 1460,
+      "share": 0.076
+    },
+    {
+      "name": "Runtime Node.js (réseau, flux, divers)",
+      "ms": 1049,
+      "share": 0.0546
+    },
+    {
+      "name": "Journalisation (morgan / winston)",
+      "ms": 825,
+      "share": 0.0429
+    },
+    {
+      "name": "Ramasse-miettes (GC)",
+      "ms": 686,
+      "share": 0.0357
+    },
+    {
+      "name": "Filtrage des dates en mémoire (dayjs)",
+      "ms": 166,
+      "share": 0.0086
+    },
+    {
+      "name": "Validation Zod de chaque ligne",
+      "ms": 81,
+      "share": 0.0042
+    }
+  ],
+  "topFunctions": [
+    {
+      "name": "stringify — express/lib/response.js:1145",
+      "ms": 2882,
+      "share": 0.15
+    },
+    {
+      "name": "slice — node:buffer:633",
+      "ms": 1415,
+      "share": 0.0736
+    },
+    {
+      "name": "utf8Slice — natif",
+      "ms": 1366,
+      "share": 0.0711
+    },
+    {
+      "name": "toIsoDate — file:///home/user/5PERF/dist/weather/repository.js:16",
+      "ms": 1361,
+      "share": 0.0708
+    },
+    {
+      "name": "parseRow — pg/lib/result.js:63",
+      "ms": 1164,
+      "share": 0.0606
+    },
+    {
+      "name": "parseDataRowMessage — pg-protocol/dist/parser.js:208",
+      "ms": 1013,
+      "share": 0.0527
+    },
+    {
+      "name": "(garbage collector) — natif",
+      "ms": 686,
+      "share": 0.0357
+    },
+    {
+      "name": "writeBuffer — natif",
+      "ms": 531,
+      "share": 0.0276
+    },
+    {
+      "name": "(anonyme) — natif",
+      "ms": 521,
+      "share": 0.0271
+    },
+    {
+      "name": "writev — natif",
+      "ms": 506,
+      "share": 0.0263
+    },
+    {
+      "name": "update — node:internal/crypto/hash:96",
+      "ms": 494,
+      "share": 0.0257
+    },
+    {
+      "name": "emit — node:events:461",
+      "ms": 422,
+      "share": 0.022
+    },
+    {
+      "name": "handlePacket — pg-protocol/dist/parser.js:93",
+      "ms": 359,
+      "share": 0.0187
+    },
+    {
+      "name": "parse — pg-protocol/dist/parser.js:28",
+      "ms": 293,
+      "share": 0.0152
+    },
+    {
+      "name": "_handleDataRow — pg/lib/client.js:365",
+      "ms": 247,
+      "share": 0.0128
+    }
+  ]
+}

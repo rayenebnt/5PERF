@@ -1,0 +1,34 @@
+# Mesures complémentaires sur l'état final (code optimisé + migration), machine au repos.
+# Colonnes : scénario:utilisateurs[:gzip] — débit (req/s) — temps de réponse (ms) — CPU par requête (ms),
+# côté Node.js puis PostgreSQL — taille moyenne des réponses (octets) — requêtes en échec.
+# Les variantes « sans requêtes préparées » et « sans journal d'accès » sont dans secondary-variants.txt.
+### A. état final (référence)
+état final             avg-1y:20          rps  2582.67  p50    6.956  p95    13.23  p99   17.367  nodeCPU 0.413  pgCPU 0.183  bytes 25  fail 0
+état final             data-30d:20        rps  2395.25  p50    7.921  p95   12.708  p99   16.199  nodeCPU 0.453  pgCPU 0.103  bytes 2831  fail 0
+état final             avg-full:20        rps  1090.08  p50   17.033  p95   29.291  p99   37.508  nodeCPU 0.473  pgCPU 2.847  bytes 25  fail 0
+état final             data-1y:20         rps   928.25  p50   20.393  p95   33.985  p99   41.742  nodeCPU 1.115  pgCPU 0.289  bytes 34425  fail 0
+état final             data-1y:20:gzip    rps   867.75  p50   21.617  p95   32.896  p99   40.562  nodeCPU 1.328  pgCPU 0.316  bytes 3097  fail 0
+état final             data-full:1        rps    37.92  p50   24.092  p95   40.012  p99   41.929  nodeCPU 25.943  pgCPU 7.215  bytes 1377734  fail 0
+état final             data-full:1:gzip   rps     31.5  p50   28.903  p95   45.131  p99   47.562  nodeCPU 31.609  pgCPU 7.256  bytes 119499  fail 0
+état final             data-page:1        rps   364.83  p50    2.448  p95    3.912  p99    5.635  nodeCPU 2.469  pgCPU 0.603  bytes 94339  fail 0
+état final             data-page:1:gzip   rps   307.83  p50    2.968  p95    4.489  p99    5.723  nodeCPU 3.012  pgCPU 0.625  bytes 8264  fail 0
+### A bis. état final (seconde mesure, pour estimer le bruit)
+état final (bis)       avg-1y:20          rps   2749.5  p50    6.673  p95   11.711  p99   15.594  nodeCPU 0.393  pgCPU 0.174  bytes 25  fail 0
+état final (bis)       data-30d:20        rps  2101.25  p50    8.622  p95   15.635  p99   21.235  nodeCPU 0.504  pgCPU 0.112  bytes 2831  fail 0
+état final (bis)       avg-full:20        rps  1105.92  p50   16.699  p95   29.059  p99   35.895  nodeCPU 0.459  pgCPU 2.823  bytes 25  fail 0
+### D. 1 processus (bench/cluster.mjs)
+1 processus            avg-1y:20          rps  2648.42  p50    6.864  p95   12.634  p99   16.111  nodeCPU 0.406  pgCPU 0.172  bytes 25  fail 0
+1 processus            data-30d:20        rps  2333.67  p50    7.936  p95   13.999  p99   18.153  nodeCPU 0.459  pgCPU 0.103  bytes 2831  fail 0
+1 processus            data-full:20       rps       33  p50   562.78  p95  802.475  p99  912.548  nodeCPU 32.909  pgCPU 7.548  bytes 1377649  fail 0
+1 processus            mixed:20           rps      489  p50   36.081  p95   94.571  p99  126.751  nodeCPU 2.052  pgCPU 1.061  bytes 74887  fail 0
+### D. 2 processus (bench/cluster.mjs)
+2 processus            avg-1y:20          rps  3949.08  p50    4.448  p95    9.969  p99   14.252  nodeCPU 0.449  pgCPU 0.170  bytes 25  fail 0
+2 processus            data-30d:20        rps  3700.75  p50    4.957  p95    9.516  p99   12.662  nodeCPU 0.530  pgCPU 0.103  bytes 2831  fail 0
+2 processus            data-full:20       rps    62.08  p50  309.941  p95  436.887  p99  480.568  nodeCPU 31.830  pgCPU 7.163  bytes 1378543  fail 0
+2 processus            mixed:20           rps   865.58  p50   12.294  p95   62.803  p99   89.639  nodeCPU 2.020  pgCPU 1.004  bytes 78200  fail 0
+### D. 3 processus (bench/cluster.mjs)
+3 processus            avg-1y:20          rps  4743.67  p50    3.975  p95    8.262  p99   11.824  nodeCPU 0.476  pgCPU 0.172  bytes 25  fail 0
+3 processus            data-30d:20        rps  4764.25  p50    3.786  p95    7.176  p99   10.456  nodeCPU 0.525  pgCPU 0.107  bytes 2831  fail 0
+3 processus            data-full:20       rps    87.33  p50  221.564  p95  318.607  p99   370.61  nodeCPU 29.120  pgCPU 6.573  bytes 1378932  fail 0
+3 processus            mixed:20           rps  1081.92  p50    9.266  p95   56.497  p99   85.212  nodeCPU 2.024  pgCPU 0.969  bytes 77482  fail 0
+terminé

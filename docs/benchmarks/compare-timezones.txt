@@ -1,0 +1,37 @@
+=== TZ=Europe/Paris (origine sur la base WeatherTrack_legacy)
+exemple : [{"location":"Lyon","date":"2023-12-30T23:00:00.000Z","temperature":7.5,"humidity":74}]
+Requêtes comparées            : 404
+Codes HTTP de la référence    : {"200":329,"400":12,"404":4,"500":59}
+Réponses strictement égales   : 286
+Moyennes égales à 1e-9 près   : 59
+  dont écart relatif maximal  : 6.4e-15
+Plantages corrigés (500->200) : 59
+Écarts inattendus             : 0
+=== TZ=America/New_York (origine sur la base WeatherTrack)
+exemple : [{"location":"Lyon","date":"2023-12-31T05:00:00.000Z","temperature":7.5,"humidity":74}]
+Requêtes comparées            : 404
+Codes HTTP de la référence    : {"200":329,"400":12,"404":4,"500":59}
+Réponses strictement égales   : 285
+Moyennes égales à 1e-9 près   : 60
+  dont écart relatif maximal  : 6.4e-15
+Plantages corrigés (500->200) : 59
+Écarts inattendus             : 0
+=== TZ=America/Sao_Paulo (origine sur la base WeatherTrack_legacy)
+exemple : [{"location":"Lyon","date":"2023-12-31T03:00:00.000Z","temperature":7.5,"humidity":74}]
+Requêtes comparées            : 404
+Codes HTTP de la référence    : {"200":329,"400":12,"404":4,"500":59}
+Réponses strictement égales   : 285
+Moyennes égales à 1e-9 près   : 60
+  dont écart relatif maximal  : 6.4e-15
+Plantages corrigés (500->200) : 59
+Écarts inattendus             : 0
+=== TZ=Asia/Kolkata (origine sur la base WeatherTrack_legacy)
+exemple : [{"location":"Lyon","date":"2023-12-30T18:30:00.000Z","temperature":7.5,"humidity":74}]
+Requêtes comparées            : 404
+Codes HTTP de la référence    : {"200":329,"400":12,"404":4,"500":59}
+Réponses strictement égales   : 286
+Moyennes égales à 1e-9 près   : 59
+  dont écart relatif maximal  : 6.4e-15
+Plantages corrigés (500->200) : 59
+Écarts inattendus             : 0
+terminé

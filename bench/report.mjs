@@ -259,6 +259,7 @@ section(
       ['`secondary.txt`', 'État final : compression, pagination, mise à l’échelle sur 1 à 3 processus'],
       ['`secondary-variants.txt`', 'Comparaisons A/B : requêtes préparées, journal d’accès'],
       ['`recheck-300.json`, `recheck-300-injecteur-corrige.json`', 'Palier à 300 req/s rejoué, avant et après correction de l’injecteur (connexions inactives)'],
+      ['`migration-sous-trafic.txt`', 'Migration 002 rejouée pendant que l’application sert des lectures et des écritures'],
     ],
     ['l', 'l']
   )
