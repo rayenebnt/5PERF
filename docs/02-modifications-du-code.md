@@ -363,11 +363,14 @@ Trois dispositifs, détaillés dans le rapport de performance (section 8) :
 ### Déploiement
 
 1. `npm ci && npm run build`.
-2. `npm run migrate` sur la base cible. La migration est en ligne ; elle peut être lancée avant,
-   pendant ou après le déploiement du code, qui fonctionne avec l'ancien index comme avec le nouveau.
-   Prévoir de l'espace disque pour l'index en construction (690 Mo pour 14,6 millions de lignes),
-   rendu par la suppression de l'ancien.
-3. Déployer la nouvelle version (`NODE_ENV=production npm start`), instance par instance : l'arrêt
+2. Fournir les coordonnées de la base cible. Comme à l'origine, `config/production.yaml` n'en
+   contient pas (`toBeDefinedAtDeployTime`) : la variable `NODE_CONFIG` les apporte sans les écrire
+   dans le dépôt (exemple dans le readme). Les deux étapes suivantes la supposent définie.
+3. `NODE_ENV=production npm run migrate` sur la base cible. La migration est en ligne ; elle peut
+   être lancée avant, pendant ou après le déploiement du code, qui fonctionne avec l'ancien index
+   comme avec le nouveau. Prévoir de l'espace disque pour l'index en construction (690 Mo pour
+   14,6 millions de lignes), rendu par la suppression de l'ancien.
+4. Déployer la nouvelle version (`NODE_ENV=production npm start`), instance par instance : l'arrêt
    propre permet un déploiement sans requête perdue.
 
 ### Retour arrière

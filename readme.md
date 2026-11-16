@@ -73,18 +73,39 @@ npm ci
   npm run start:watch
   ```
 
-- En production (code compilé) :
+- Code compilé, sur la base locale (configuration de `config/default.yaml`) :
 
   ```sh
   npm run build
   ```
 
   ```sh
-  NODE_ENV=production npm run migrate
+  npm start
+  ```
+
+- En production. Comme dans le projet d'origine, `config/production.yaml` écoute sur le port 80 et
+  ne contient pas les coordonnées de la base (`toBeDefinedAtDeployTime`) : elles se fournissent au
+  déploiement, par exemple avec `NODE_CONFIG`. Sans elles, la migration s'arrête sur une erreur
+  `ENOTFOUND` et l'API répond 500 à chaque requête.
+
+  ```sh
+  export NODE_ENV=production
   ```
 
   ```sh
-  NODE_ENV=production npm start
+  export NODE_CONFIG='{"database":{"host":"<hôte>","user":"<utilisateur>","password":"<mot de passe>","database":"<base>"}}'
+  ```
+
+  ```sh
+  npm run build
+  ```
+
+  ```sh
+  npm run migrate
+  ```
+
+  ```sh
+  npm start
   ```
 
 La configuration se règle par environnement dans `config/` (voir la documentation du paquet
@@ -93,7 +114,8 @@ La configuration se règle par environnement dans `config/` (voir la documentati
 
 | Clé | Rôle | Défaut |
 |---|---|---|
-| `api.port` | Port d'écoute | 3000 |
+| `api.port` | Port d'écoute | 3000 (80 en production) |
+| `database.host`, `user`, `password`, `database` | Coordonnées PostgreSQL | Base locale de l'installation ci-dessus ; à fournir en production |
 | `api.compression` | Compression gzip/brotli des réponses de plus de 4 ko | `true` |
 | `api.cacheMaxAgeSeconds` | Durée de l'en-tête `Cache-Control` des réponses `GET` (0 : désactivé) | 60 |
 | `database.max` | Taille du pool de connexions PostgreSQL | 10 |
@@ -104,7 +126,14 @@ La configuration se règle par environnement dans `config/` (voir la documentati
 ## Migrations de la base
 
 Le schéma est géré par des migrations versionnées (`src/db/migrations.ts`), enregistrées dans la
-table `schema_migrations`.
+table `schema_migrations`. En développement, elles s'appliquent toutes seules au démarrage. Pour les
+lancer à la main, sans compiler :
+
+```sh
+npm run migrate:dev
+```
+
+Ou avec le code compilé, après `npm run build` :
 
 ```sh
 npm run migrate
