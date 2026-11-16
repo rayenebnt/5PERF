@@ -1,5 +1,11 @@
 # WeatherTrack Pro — Documentation des modifications du code
 
+| | |
+|---|---|
+| **Projet** | Mini-projet 5PERF — audit et optimisation de WeatherTrack Pro |
+| **Auteur** | Rayene BEN TORKIA |
+| **Date** | 16 novembre 2026 |
+
 Ce document décrit chaque modification apportée au code fourni : le problème traité, ce qui a changé,
 pourquoi le comportement fonctionnel est préservé, et l'effet mesuré. Les mesures détaillées et leur
 méthode sont dans le [rapport de performance](01-rapport-de-performance.md).

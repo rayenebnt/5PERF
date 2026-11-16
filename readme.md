@@ -6,6 +6,8 @@ minimum, maximum de température).
 
 Ce dépôt contient le code optimisé, l'outillage de mesure et les livrables du projet.
 
+Auteur : Rayene BEN TORKIA.
+
 ## Livrables
 
 | Livrable | Où le trouver | Version PDF |

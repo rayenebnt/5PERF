@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Projet** | Mini-projet 5PERF — audit et optimisation de WeatherTrack Pro |
-| **Auteur** | [Prénom Nom] |
+| **Auteur** | Rayene BEN TORKIA |
 | **Date** | 16 novembre 2026 |
 | **Documents liés** | [Modifications du code](02-modifications-du-code.md) · [Recommandations](03-recommandations.md) · [Mesures brutes](benchmarks/README.md) |
 

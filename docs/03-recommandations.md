@@ -1,5 +1,11 @@
 # WeatherTrack Pro — Recommandations
 
+| | |
+|---|---|
+| **Projet** | Mini-projet 5PERF — audit et optimisation de WeatherTrack Pro |
+| **Auteur** | Rayene BEN TORKIA |
+| **Date** | 16 novembre 2026 |
+
 Ce document complète le [rapport de performance](01-rapport-de-performance.md) et la
 [documentation des modifications](02-modifications-du-code.md). Il répond à deux questions :
 
